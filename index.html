@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piotr Błoński BETA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f2ed;
+      color: #333;
+    }
+
+    /* Tło drewniane w nagłówku */
+    header {
+      background: url(562a7420-514c-4b98-a4ff-06970a64b235.png) center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Nawigacja */
+    nav {
+      background: #2b1d13;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4a373;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #4a3623;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .offer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .offer div {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .offer div:hover {
+      transform: scale(1.05);
+    }
+
+    .slider {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.6s ease;
+      height: 600px;
+      width: 100%;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .contact {
+      background: #eee;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 12px;
+      background: #4a3623;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #2b1d13;
+    }
+
+    footer {
+      background: #4a3623;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Piotr Błoński</h1>
+    <p>Unikatowe meble na wymiar, tworzone z pasją</p>
+  </header>
+
+  <nav>
+    <a href="#onas">O nas</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <section id="onas">
+    <h2>O nas</h2>
+    <p>Stolarstwo to dla mnie pasja, którą rozwijam od wielu lat. Tworzę meble, które łączą funkcjonalność z naturalnym pięknem drewna. Każdy projekt wykonuję z dbałością o szczegóły i potrzeby klienta – od kuchni i szaf wnękowych po stoły i elementy dekoracyjne.</p>
+  </section>
+
+  <section id="oferta">
+    <h2>Oferta</h2>
+    <div class="offer">
+      <div><h3>Kuchnie na wymiar</h3><p>Nowoczesne i klasyczne rozwiązania do każdej przestrzeni.</p></div>
+      <div><h3>Szafy wnękowe</h3><p>Idealnie dopasowane do wnętrza i Twoich potrzeb.</p></div>
+      <div><h3>Stoły i krzesła</h3><p>Solidne, trwałe i wyjątkowe meble rodzinne.</p></div>
+      <div><h3>Wszelaki wystrój wnętrz</h3><p>Duży wybór, efektywne wykonanie, meble robione z pasją i najwyższej jakości.</p></div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="Azurill_Pichu_Bros.png" alt="Mebel 1">
+        <img src="Azurill_Pichu_Bros.png" alt="Mebel 2">
+        <img src="" alt="Mebel 3">
+        <img src="" alt="Mebel 4">
+        <img src="" alt="Mebel 5">
+        <img src="" alt="Mebel 6">
+      </div>
+      <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <div class="contact">
+      <p><strong>Telefon:</strong> 501 187 773</p>
+      <p><strong>Email:</strong> blonski17@o2.pl</p>
+      <p><strong>Adres:</strong> ul. Magiczna 15, Rzeszów</p>
+
+      <form>
+        <input type="text" placeholder="Imię i nazwisko" required>
+        <input type="email" placeholder="Adres e-mail" required>
+        <textarea rows="5" placeholder="Twoja wiadomość" required></textarea>
+        <button type="submit">Wyślij</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Stolarz - Piotr Błoński | Wszystkie prawa zastrzeżone</p>
+  </footer>
+
+  <script>
+    let index = 0;
+    function moveSlide(step) {
+      const slides = document.querySelector('.slides');
+      const images = document.querySelectorAll('.slides img');
+      index = (index + step + images.length) % images.length;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>
